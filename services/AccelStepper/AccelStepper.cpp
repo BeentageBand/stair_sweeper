@@ -166,17 +166,18 @@ void AccelStepper::computeNewSpeed()
 	_speed = -_speed;
 
 
-#if 0
-    Serial.println(_speed);
-    Serial.println(_acceleration);
-    Serial.println(_cn);
-    Serial.println(_c0);
-    Serial.println(_n);
-    Serial.println(_stepInterval);
-    Serial.println(distanceTo);
-    Serial.println(stepsToStop);
-    Serial.println("-----");
-#endif
+    Dbg_Verb("\nspeed = %d\n"
+    		"acceleration = %d\n"
+    		"cn = %d\n"
+    		"c0 = %d\n"
+    		"stepInterval = %d\n"
+    		"distance to = %d\n"
+    		"steps to stop = %d\n"
+    		"------",
+			_speed,
+			_acceleration,
+			_cn,
+			_c0, _n, _stepInterval, distanceTo, stepsToStop);
 }
 
 // Run the motor to implement speed and acceleration in order to proceed to the target position

@@ -22,6 +22,8 @@ linux_build=linux
 arduino_build=arduino
 
 #MACRO
+linux_MACROS=-DARDUINO=106
+
 host_PROJ_INC=include include/linux
 linux_PROJ_INC=include include/linux
 arduino_PROJ_INC=include include/arduino

@@ -51,7 +51,7 @@
 
 #define WHILE_INDIRECT() WHILE
 
-#define DEC(num) CAT(DEC_,num)
+#define DECR(num) CAT(DEC_,num)
 
 #define DEC_1 0
 #define DEC_2 1
