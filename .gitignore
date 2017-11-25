@@ -4,4 +4,6 @@ out
 .cproject
 .project
 .screenrc
+.*.swp
+.*.swo
 tags
