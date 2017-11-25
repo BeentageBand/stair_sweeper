@@ -10,7 +10,7 @@ void setup(void)
 
 void loop(void)
 {
-	int secs = 0;
+	static int secs = 0;
 	Dbg_Info("loop %d secs", secs++);
 	delay(1000);
 }

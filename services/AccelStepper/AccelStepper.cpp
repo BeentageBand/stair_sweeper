@@ -1,9 +1,11 @@
 // AccelStepper.cpp
+#define Dbg_FID DBG_FID_DEF(ACCEL_STEPPER_ID, 1)
 //
 // Copyright (C) 2009-2013 Mike McCauley
 // $Id: AccelStepper.cpp,v 1.23 2016/08/09 00:39:10 mikem Exp $
 
 #include "AccelStepper.h"
+#include "dbg_log.h"
 
 #if 0
 // Some debugging assistance
@@ -162,6 +164,7 @@ void AccelStepper::computeNewSpeed()
     _speed = 1000000.0 / _cn;
     if (_direction == DIRECTION_CCW)
 	_speed = -_speed;
+
 
 #if 0
     Serial.println(_speed);
@@ -541,7 +544,11 @@ void AccelStepper::step8(long step)
 // Prevents power consumption on the outputs
 void    AccelStepper::disableOutputs()
 {   
-    if (! _interface) return;
+    if (! _interface)
+    	{
+    	Dbg_Warn("AccelStepper interface = %d", _interface);
+    	return;
+    	}
 
     setOutputPins(0); // Handles inversion automatically
     if (_enablePin != 0xff)
@@ -554,7 +561,10 @@ void    AccelStepper::disableOutputs()
 void    AccelStepper::enableOutputs()
 {
     if (! _interface) 
-	return;
+    	{
+    	Dbg_Warn("AccelStepper interface = %d", _interface);
+    	return;
+    	}
 
     pinMode(_pin[0], OUTPUT);
     pinMode(_pin[1], OUTPUT);

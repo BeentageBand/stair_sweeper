@@ -4,7 +4,7 @@
 #include <avr/pgmspace.h>
 
 #define DBG_FID_LIST(FID) \
-   FID(SKETCH_FID, DBG_WARN_LVL, "Gtest Framework ID") \
+   FID(SKETCH_FID, DBG_INFO_LVL, "Gtest Framework ID") \
    FID(IPC_FID,   DBG_WARN_LVL, "IPC ID") \
 
 #define Dbg_Log_Print(feat_id, lvl, line, ...) \

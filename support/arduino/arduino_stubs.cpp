@@ -1,4 +1,5 @@
 #include "Arduino.h"
+#include <unistd.h>
 
 HardwareSerial Serial(NULL, NULL, NULL, NULL, NULL, NULL);
 
@@ -19,8 +20,12 @@ _udr(udr)
 void HardwareSerial::begin(unsigned long baud, uint8_t port)
 {}
 
-void delay(unsigned long)
-{}
+void delay(unsigned long ms)
+{
+	ms /= 1000UL;
+
+	sleep((ms)? ms : 0.1);
+}
 
 int HardwareSerial::available(void){return 0;}
 int HardwareSerial::peek(void){ return 0;}
