@@ -1,0 +1,23 @@
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/arduino/Arduino.h out/linux/inc/Arduino.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/arduino/binary.h out/linux/inc/binary.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/arduino/Client.h out/linux/inc/Client.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/arduino/HardwareSerial.h out/linux/inc/HardwareSerial.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/arduino/HardwareSerial_private.h out/linux/inc/HardwareSerial_private.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/arduino/IPAddress.h out/linux/inc/IPAddress.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/arduino/new.h out/linux/inc/new.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/arduino/PluggableUSB.h out/linux/inc/PluggableUSB.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/arduino/Printable.h out/linux/inc/Printable.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/arduino/Print.h out/linux/inc/Print.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/arduino/Server.h out/linux/inc/Server.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/arduino/Stream.h out/linux/inc/Stream.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/arduino/Udp.h out/linux/inc/Udp.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/arduino/USBAPI.h out/linux/inc/USBAPI.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/arduino/USBCore.h out/linux/inc/USBCore.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/arduino/USBDesc.h out/linux/inc/USBDesc.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/arduino/wiring_private.h out/linux/inc/wiring_private.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/arduino/WCharacter.h out/linux/inc/WCharacter.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/arduino/WString.h out/linux/inc/WString.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/dbg_log/dbg_log.h out/linux/inc/dbg_log.h;
+cp -sf /home/puch/beentageband/projects/stair_sweeper/support/dbg_log/dbg_log_types.h out/linux/inc/dbg_log_types.h;
+g++ -std=c++11 -Wall -pthread -g  -iquote include -iquote ./out/linux/inc -iquote ./support/arduino//variants/standard -o out/linux/obj/stair_sweeper_sketch.o -c sketch/stair_sweeper_sketch.cpp;
+project_make/gcc.mk:55: recipe for target 'out/linux/obj/stair_sweeper_sketch.o' failed

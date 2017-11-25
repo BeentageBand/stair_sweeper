@@ -1,0 +1,7 @@
+# Output Directories
+out
+.settings
+.cproject
+.project
+.screenrc
+tags

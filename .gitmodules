@@ -1,0 +1,6 @@
+[submodule "project_make"]
+	path = project_make
+	url = https://github.com/BeentageBand/project_make
+[submodule "support/dbg_log"]
+	path = support/dbg_log
+	url = https://github.com/BeentageBand/dbg_log
