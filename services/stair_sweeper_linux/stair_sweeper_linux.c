@@ -5,7 +5,3 @@
  *      Author: puch
  */
 
-#include <stdio.h>
-#include "dbg_log_ext.h"
-
-struct Dbg_Log_Stdout Dbg_Stdout = {vsprintf};
