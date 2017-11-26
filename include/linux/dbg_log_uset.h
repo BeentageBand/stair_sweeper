@@ -3,8 +3,10 @@
 
 #define DBG_FID_LIST(FID) \
 	/*  Feature ID,        Dbg Level,    Description */ \
+   FID(GTEST_FID,          DBG_WARN_LVL, "Gtest Framework") \
    FID(SKETCH_FID,         DBG_INFO_LVL, "Sketch ID") \
-   FID(ACCEL_STEPPER_ID,   DBG_INFO_LVL, "Accel Stepper") \
+   FID(ACCEL_STEPPER_FID,   DBG_WARN_LVL, "Accel Stepper") \
+   FID(STAIR_STEPPER_FID,   DBG_INFO_LVL, "Stair Stepper App") \
 
 #define Dbg_Log_Print(feat_id, lvl, line, ...) \
     Dbg_Log(lvl, IFF_1(__VA_ARGS__), feat_id, line, IFF_0(__VA_ARGS__))

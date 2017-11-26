@@ -26,16 +26,18 @@ void setup(void)
 void loop(void)
 {
 	static int secs = 0;
+
 	Dbg_Info("loop %d secs", secs++);
 	delay(1000);
 	if (digitalRead(rightButton) == LOW) {
 		Dbg_Info("RightButton = %d", digitalRead(rightButton));
-		armExtension.runToNewPosition(-4000);
+		StairStepper::Single().step_up();
+		//armExtension.runToNewPosition(-4000);
 	}
 
 	if (digitalRead(leftButton) == LOW) {
 		Dbg_Info("RightButton = %d", digitalRead(rightButton));
-		armExtension.runToNewPosition(0);
+		StairStepper::Single().step_down();
 	}
 
 	StairStepper::Single().run();

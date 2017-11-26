@@ -14,12 +14,13 @@
 class StairStepper
 {
 private:
-	AccelStepper armAngle(AccelStepper::DRIVER, 2, 5); // arm angle 0-5000? - neg is out
-	AccelStepper stairClimb(AccelStepper::DRIVER, 3, 6); // up down -10,000 to 10,000 - neg goes up
-	AccelStepper armExtension(AccelStepper::DRIVER, 4, 7); // arm extension 0-4000 - pos goes out
+	AccelStepper armAngle;// arm angle 0-5000? - neg is out
+	AccelStepper stairClimb; // up down -10,000 to 10,000 - neg goes up
+	AccelStepper armExtension; // arm extension 0-4000 - pos goes out
     const uint8_t stepperEnable;
 public:
 	static StairStepper & Single(void);
+
 private:
 	StairStepper(void);
 	virtual ~StairStepper(void);

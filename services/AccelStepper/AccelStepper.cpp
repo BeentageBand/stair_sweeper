@@ -1,5 +1,5 @@
 // AccelStepper.cpp
-#define Dbg_FID DBG_FID_DEF(ACCEL_STEPPER_ID, 1)
+#define Dbg_FID DBG_FID_DEF(ACCEL_STEPPER_FID, 1)
 //
 // Copyright (C) 2009-2013 Mike McCauley
 // $Id: AccelStepper.cpp,v 1.23 2016/08/09 00:39:10 mikem Exp $

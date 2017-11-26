@@ -4,6 +4,7 @@
  *  Created on: Nov 25, 2017
  *      Author: puch
  */
+#define Dbg_FID DBG_FID_DEF(STAIR_STEPPER_FID, 0)
 
 #include "stair_stepper.h"
 
